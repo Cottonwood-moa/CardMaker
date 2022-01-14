@@ -3,13 +3,14 @@ import Footer from "../footer/footer";
 import Header from "../header/header";
 import styles from "./login.module.css";
 import { useNavigate } from "react-router-dom";
-const Login = ({ authService }) => {
+const Login = ({ authService, getId }) => {
   const navigate = new useNavigate();
   const goToMaker = (userId) => {
     navigate({
       pathname: "/maker",
       state: { id: userId },
     });
+    getId(userId);
   };
   const onLogin = (event) => {
     authService //
