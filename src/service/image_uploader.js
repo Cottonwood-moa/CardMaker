@@ -7,7 +7,6 @@ class ImageUploader {
     // 객체를 통신할 때 json으로 변환해서 보내야 하는 걸 생략해주는 느낌으로 이해하자
     data.append("file", file);
     data.append("upload_preset", "t1vybx3b");
-    console.log(data);
     const result = await fetch(
       "https://api.cloudinary.com/v1_1/dznxhgek6/image/upload",
       {

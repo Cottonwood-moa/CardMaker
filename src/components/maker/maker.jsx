@@ -4,7 +4,7 @@ import Header from "../header/header";
 import Footer from "../footer/footer";
 import Preview from "../preview/preview";
 import Editor from "../editor/editor";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Maker = ({
   authService,
@@ -13,11 +13,42 @@ const Maker = ({
   setGetUserId,
   cardRepository,
 }) => {
-  const [cards, setCards] = useState({});
+  const [cards, setCards] = useState({
+    // 1: {
+    //   id: "1",
+    //   name: "Cottonwood",
+    //   company: "moa",
+    //   theme: "light",
+    //   title: "Software Engineer",
+    //   email: "geon0529@gmail.com",
+    //   message: "go for it",
+    //   fileName: "Cottonwood",
+    //   fileURL: null,
+    // },
+    // 2: {
+    //   id: "2",
+    //   name: "Cottonwood2",
+    //   company: "moa",
+    //   theme: "dark",
+    //   title: "Software Engineer",
+    //   email: "geon0529@gmail.com",
+    //   message: "go for it",
+    //   fileName: "Cottonwood",
+    //   fileURL: null,
+    // },
+    // 3: {
+    //   id: "3",
+    //   name: "Cottonwood3",
+    //   company: "moa",
+    //   theme: "colorful",
+    //   title: "Software Engineer",
+    //   email: "geon0529@gmail.com",
+    //   message: "go for it",
+    //   fileName: "Cottonwood",
+    //   fileURL: null,
+    // },
+  });
   const navigate = useNavigate();
-  const onTest = () => {
-    console.log("내려온 변수:", getUserId);
-  };
   // =====================================================
   // const updateCard = (card) => {
   //   const updated = { ...cards };s
@@ -29,7 +60,6 @@ const Maker = ({
     setCards((cards) => {
       const updated = { ...cards };
       updated[card.id] = card;
-      console.log(updated);
       return updated;
     });
     cardRepository.saveCard(getUserId, card);
@@ -51,7 +81,6 @@ const Maker = ({
   };
 
   useEffect(() => {
-    console.log("sync", getUserId);
     if (!getUserId) {
       authService.onAuthChange((user) => {
         if (user) {
@@ -67,10 +96,9 @@ const Maker = ({
     return () => {
       stopSync();
     };
-  }, [getUserId]);
+  }, [getUserId, cardRepository, navigate, setGetUserId]);
 
   useEffect(() => {
-    console.log(getUserId);
     authService.onAuthChange((user) => {
       if (user) {
         setGetUserId(user.uid);
@@ -78,8 +106,7 @@ const Maker = ({
         navigate("/");
       }
     });
-    console.log(getUserId);
-  });
+  }, [authService, setGetUserId, navigate]);
 
   return (
     <section className={styles.maker}>
@@ -95,7 +122,6 @@ const Maker = ({
         <Preview cards={cards} />
       </div>
       <Footer />
-      <button onClick={onTest}>테스트버튼</button>
     </section>
   );
 };
