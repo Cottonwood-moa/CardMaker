@@ -13,41 +13,7 @@ const Maker = ({
   setGetUserId,
   cardRepository,
 }) => {
-  const [cards, setCards] = useState({
-    // 1: {
-    //   id: "1",
-    //   name: "Cottonwood",
-    //   company: "moa",
-    //   theme: "light",
-    //   title: "Software Engineer",
-    //   email: "geon0529@gmail.com",
-    //   message: "go for it",
-    //   fileName: "Cottonwood",
-    //   fileURL: null,
-    // },
-    // 2: {
-    //   id: "2",
-    //   name: "Cottonwood2",
-    //   company: "moa",
-    //   theme: "dark",
-    //   title: "Software Engineer",
-    //   email: "geon0529@gmail.com",
-    //   message: "go for it",
-    //   fileName: "Cottonwood",
-    //   fileURL: null,
-    // },
-    // 3: {
-    //   id: "3",
-    //   name: "Cottonwood3",
-    //   company: "moa",
-    //   theme: "colorful",
-    //   title: "Software Engineer",
-    //   email: "geon0529@gmail.com",
-    //   message: "go for it",
-    //   fileName: "Cottonwood",
-    //   fileURL: null,
-    // },
-  });
+  const [cards, setCards] = useState({});
   const navigate = useNavigate();
   // =====================================================
   // const updateCard = (card) => {
@@ -96,7 +62,7 @@ const Maker = ({
     return () => {
       stopSync();
     };
-  }, [getUserId, cardRepository, navigate, setGetUserId]);
+  }, [getUserId, cardRepository, navigate, setGetUserId, authService]);
 
   useEffect(() => {
     authService.onAuthChange((user) => {
