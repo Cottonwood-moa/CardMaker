@@ -1,4 +1,4 @@
-# Vue3 Movie app
+# Business Card Maker
 
 ㅤ  
 **드림코딩 엘리님의 강의와 함께 했습니다.**  
