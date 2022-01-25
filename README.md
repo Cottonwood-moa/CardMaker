@@ -35,7 +35,7 @@ React와 Firebase를 사용한 CardMaker 사이트 입니다.
 
 ### 구성
 
-```js
+```json
 {
   "name": "template",
   "version": "0.1.0",
