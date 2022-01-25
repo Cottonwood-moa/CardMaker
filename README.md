@@ -3,8 +3,8 @@
 ㅤ  
 **드림코딩 엘리님의 강의와 함께 했습니다.**  
 ㅤ  
-[깃허브](https://github.com/Cottonwood-moa/CardMaker)
-[Go to Website](https://movie-app-cottonwood.netlify.app/)
+[깃허브](https://github.com/Cottonwood-moa/CardMaker)  
+[Go to Website](https://movie-app-cottonwood.netlify.app/)  
 
 React와 Firebase를 사용한 CardMaker 사이트 입니다.  
 ㅤ
