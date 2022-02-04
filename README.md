@@ -4,9 +4,13 @@
 **드림코딩 엘리님의 강의와 함께 했습니다.**  
 ㅤ  
 [깃허브](https://github.com/Cottonwood-moa/CardMaker)  
-[Go to Website](https://movie-app-cottonwood.netlify.app/)  
+[Go to Website](https://business-card-maker-2c1ce.web.app/)  
 
 React와 Firebase를 사용한 CardMaker 사이트 입니다.  
+
+## Preview
+![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/79053495/152557936-50212ecb-d4ac-4feb-9ea2-5c4ccac6a92b.gif)  
+  
 ㅤ
 ## 📖 Docs
 
@@ -31,7 +35,6 @@ React와 Firebase를 사용한 CardMaker 사이트 입니다.
 - react-router-dom
 - PostCSS
 - Firebase
-- OMDb API
 
 ### 구성
 
